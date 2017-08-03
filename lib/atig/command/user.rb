@@ -7,7 +7,7 @@ module Atig
   module Command
     class User < Atig::Command::Command
       def initialize(*args); super end
-      def command_name; %w(user u) end
+      def command_name; %w(user) end
 
       def action(target, mesg, command, args)
         if args.empty?
