@@ -47,6 +47,17 @@ END
         prefix      = prefix user
         str         = run_filters entry
 
+
+        acl = YAML.load_file("filters.yaml")
+        acl.each do |y|
+            if y["enabled"] and user.screen_name.match(y["UserMatchPattern"]) and str.match(y["MatchPattern"])
+                p "DROP"
+                p user.screen_name
+                p str
+                return
+            end
+        end
+
         @session.post prefix, command, @name, str
       end
 
