@@ -15,14 +15,6 @@ module Atig
 
         @channel.notify "Client options: #{context.opts.marshal_dump.inspect}"
 
-        # つないだときに発言がないとさみしいので
-        db.statuses.find_all(limit:50).reverse_each do|entry|
-          case entry.source
-          when :timeline, :me
-            @channel.message entry
-          end
-        end
-
         # git clone した状態から動かしていたら常に最新版のチェック
         daemon do
           log :info,"check update"
