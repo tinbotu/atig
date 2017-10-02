@@ -51,6 +51,7 @@ Atig::Gateway::Session.commands = [
                                    Atig::Command::Refresh,
                                    Atig::Command::Spam,
                                    Atig::Command::Dm,
+								   Atig::Command::OriginalUrl,
                                   ]
 
 Atig::Gateway::Session.channels = [
