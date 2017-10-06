@@ -10,11 +10,7 @@ module Atig
 	 wa              wo   n
 	 ga  gi  gu  ge  go  za  ji  zu  ze  zo  da          de  do
 	 ba  bi  bu  be  bo  pa  pi  pu  pe  po
-	kya     kyu     kyo sha     shu     sho cha     chu     cho
-	nya     nyu     nyo hya     hyu     hyo mya     myu     myo
-	rya     ryu     ryo
-	gya     gyu     gyo  ja      ju      jo bya     byu     byo
-	pya     pyu     pyo
+	 ja      ju      jo
       ].freeze
 
       def make(n)
